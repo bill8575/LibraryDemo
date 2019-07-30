@@ -1,0 +1,735 @@
+{
+  "contractName": "TestLib",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/bill8575/Work/Dev/Ethereum/truffle/LibraryDemo/contracts/TestLib.sol\":\"TestLib\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/bill8575/Work/Dev/Ethereum/truffle/LibraryDemo/contracts/TestLib.sol\":{\"keccak256\":\"0xef72ef180ced15fa3d9659971f2826543aba0bc7e23a08cb395e78137c37c3bd\",\"urls\":[\"bzzr://5bc0380e56c395b84320fcb763af03a4551383fa51b1aab3e2a42a62ac042ed3\"]}},\"version\":1}",
+  "bytecode": "0x610115610026600b82828239805160001a60731461001957fe5b30600052607381538281f3fe7300000000000000000000000000000000000000003014608060405260043610603d5760003560e01c80639447fa17146042578063fc22471a146083575b600080fd5b818015604d57600080fd5b50608160048036036040811015606257600080fd5b81019080803590602001909291908035906020019092919050505060ce565b005b818015608e57600080fd5b5060b86004803603602081101560a357600080fd5b810190808035906020019092919050505060db565b6040518082815260200191505060405180910390f35b8082600001819055505050565b60008160000154905091905056fea165627a7a723058201cf6e218a8637180dfe09eaded8635301ff4b78f3fc0653fd3fccb3f010e04fb0029",
+  "deployedBytecode": "0x7300000000000000000000000000000000000000003014608060405260043610603d5760003560e01c80639447fa17146042578063fc22471a146083575b600080fd5b818015604d57600080fd5b50608160048036036040811015606257600080fd5b81019080803590602001909291908035906020019092919050505060ce565b005b818015608e57600080fd5b5060b86004803603602081101560a357600080fd5b810190808035906020019092919050505060db565b6040518082815260200191505060405180910390f35b8082600001819055505050565b60008160000154905091905056fea165627a7a723058201cf6e218a8637180dfe09eaded8635301ff4b78f3fc0653fd3fccb3f010e04fb0029",
+  "sourceMap": "25:204:2:-;;132:2:-1;166:7;155:9;146:7;137:37;255:7;249:14;246:1;241:23;235:4;232:33;222:2;;269:9;222:2;293:9;290:1;283:20;323:4;314:7;306:22;347:7;338;331:24",
+  "deployedSourceMap": "25:204:2:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;78:68;;8:9:-1;5:2;;;30:1;27;20:12;5:2;78:68:2;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;78:68:2;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;150:77;;8:9:-1;5:2;;;30:1;27;20:12;5:2;150:77:2;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;150:77:2;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;78:68;140:1;131:4;:6;;:10;;;;78:68;;:::o;150:77::-;197:4;216;:6;;;209:13;;150:77;;;:::o",
+  "source": "pragma solidity ^0.5.0;\n\nlibrary TestLib {\n  struct Data {\n    uint n;\n  }\n\n  function Set(Data storage self, uint a) public {\n    self.n = a;\n  }\n\n  function Get(Data storage self) public returns(uint) {\n    return self.n;\n  }\n}",
+  "sourcePath": "/Users/bill8575/Work/Dev/Ethereum/truffle/LibraryDemo/contracts/TestLib.sol",
+  "ast": {
+    "absolutePath": "/Users/bill8575/Work/Dev/Ethereum/truffle/LibraryDemo/contracts/TestLib.sol",
+    "exportedSymbols": {
+      "TestLib": [
+        122
+      ]
+    },
+    "id": 123,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 93,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:2"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "library",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 122,
+        "linearizedBaseContracts": [
+          122
+        ],
+        "name": "TestLib",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "TestLib.Data",
+            "id": 96,
+            "members": [
+              {
+                "constant": false,
+                "id": 95,
+                "name": "n",
+                "nodeType": "VariableDeclaration",
+                "scope": 96,
+                "src": "63:6:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 94,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "63:4:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Data",
+            "nodeType": "StructDefinition",
+            "scope": 122,
+            "src": "45:29:2",
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 109,
+              "nodeType": "Block",
+              "src": "125:21:2",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 107,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 103,
+                        "name": "self",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 98,
+                        "src": "131:4:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Data_$96_storage_ptr",
+                          "typeString": "struct TestLib.Data storage pointer"
+                        }
+                      },
+                      "id": 105,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "n",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 95,
+                      "src": "131:6:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 106,
+                      "name": "a",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 100,
+                      "src": "140:1:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "131:10:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 108,
+                  "nodeType": "ExpressionStatement",
+                  "src": "131:10:2"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 110,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "Set",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 101,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 98,
+                  "name": "self",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 110,
+                  "src": "91:17:2",
+                  "stateVariable": false,
+                  "storageLocation": "storage",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Data_$96_storage_ptr",
+                    "typeString": "struct TestLib.Data"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 97,
+                    "name": "Data",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 96,
+                    "src": "91:4:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Data_$96_storage_ptr",
+                      "typeString": "struct TestLib.Data"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 100,
+                  "name": "a",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 110,
+                  "src": "110:6:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 99,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "110:4:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "90:27:2"
+            },
+            "returnParameters": {
+              "id": 102,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "125:0:2"
+            },
+            "scope": 122,
+            "src": "78:68:2",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 120,
+              "nodeType": "Block",
+              "src": "203:24:2",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 117,
+                      "name": "self",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 112,
+                      "src": "216:4:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Data_$96_storage_ptr",
+                        "typeString": "struct TestLib.Data storage pointer"
+                      }
+                    },
+                    "id": 118,
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "n",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": 95,
+                    "src": "216:6:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 116,
+                  "id": 119,
+                  "nodeType": "Return",
+                  "src": "209:13:2"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 121,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "Get",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 113,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 112,
+                  "name": "self",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 121,
+                  "src": "163:17:2",
+                  "stateVariable": false,
+                  "storageLocation": "storage",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Data_$96_storage_ptr",
+                    "typeString": "struct TestLib.Data"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 111,
+                    "name": "Data",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 96,
+                    "src": "163:4:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Data_$96_storage_ptr",
+                      "typeString": "struct TestLib.Data"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "162:19:2"
+            },
+            "returnParameters": {
+              "id": 116,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 115,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 121,
+                  "src": "197:4:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 114,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "197:4:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "196:6:2"
+            },
+            "scope": 122,
+            "src": "150:77:2",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 123,
+        "src": "25:204:2"
+      }
+    ],
+    "src": "0:229:2"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/bill8575/Work/Dev/Ethereum/truffle/LibraryDemo/contracts/TestLib.sol",
+    "exportedSymbols": {
+      "TestLib": [
+        122
+      ]
+    },
+    "id": 123,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 93,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:2"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "library",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 122,
+        "linearizedBaseContracts": [
+          122
+        ],
+        "name": "TestLib",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "TestLib.Data",
+            "id": 96,
+            "members": [
+              {
+                "constant": false,
+                "id": 95,
+                "name": "n",
+                "nodeType": "VariableDeclaration",
+                "scope": 96,
+                "src": "63:6:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 94,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "63:4:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Data",
+            "nodeType": "StructDefinition",
+            "scope": 122,
+            "src": "45:29:2",
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 109,
+              "nodeType": "Block",
+              "src": "125:21:2",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 107,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 103,
+                        "name": "self",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 98,
+                        "src": "131:4:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Data_$96_storage_ptr",
+                          "typeString": "struct TestLib.Data storage pointer"
+                        }
+                      },
+                      "id": 105,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "n",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 95,
+                      "src": "131:6:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 106,
+                      "name": "a",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 100,
+                      "src": "140:1:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "131:10:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 108,
+                  "nodeType": "ExpressionStatement",
+                  "src": "131:10:2"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 110,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "Set",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 101,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 98,
+                  "name": "self",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 110,
+                  "src": "91:17:2",
+                  "stateVariable": false,
+                  "storageLocation": "storage",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Data_$96_storage_ptr",
+                    "typeString": "struct TestLib.Data"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 97,
+                    "name": "Data",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 96,
+                    "src": "91:4:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Data_$96_storage_ptr",
+                      "typeString": "struct TestLib.Data"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 100,
+                  "name": "a",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 110,
+                  "src": "110:6:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 99,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "110:4:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "90:27:2"
+            },
+            "returnParameters": {
+              "id": 102,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "125:0:2"
+            },
+            "scope": 122,
+            "src": "78:68:2",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 120,
+              "nodeType": "Block",
+              "src": "203:24:2",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 117,
+                      "name": "self",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 112,
+                      "src": "216:4:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Data_$96_storage_ptr",
+                        "typeString": "struct TestLib.Data storage pointer"
+                      }
+                    },
+                    "id": 118,
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "n",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": 95,
+                    "src": "216:6:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 116,
+                  "id": 119,
+                  "nodeType": "Return",
+                  "src": "209:13:2"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 121,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "Get",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 113,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 112,
+                  "name": "self",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 121,
+                  "src": "163:17:2",
+                  "stateVariable": false,
+                  "storageLocation": "storage",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Data_$96_storage_ptr",
+                    "typeString": "struct TestLib.Data"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 111,
+                    "name": "Data",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 96,
+                    "src": "163:4:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Data_$96_storage_ptr",
+                      "typeString": "struct TestLib.Data"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "162:19:2"
+            },
+            "returnParameters": {
+              "id": 116,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 115,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 121,
+                  "src": "197:4:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 114,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "197:4:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "196:6:2"
+            },
+            "scope": 122,
+            "src": "150:77:2",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 123,
+        "src": "25:204:2"
+      }
+    ],
+    "src": "0:229:2"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.8+commit.23d335f2.Emscripten.clang"
+  },
+  "networks": {
+    "1564497778992": {
+      "events": {},
+      "links": {},
+      "address": "0x3d74d8B0137aF0D9Fd3A7aF543b315C8006db958",
+      "transactionHash": "0x654e441ffd6b6ce4a8067b3e3eae14832e05651c8a7277cad524e9e3c82f6986"
+    }
+  },
+  "schemaVersion": "3.0.11",
+  "updatedAt": "2019-07-30T17:10:31.179Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
