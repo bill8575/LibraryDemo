@@ -4,6 +4,8 @@ import "truffle/Assert.sol";
 import "../contracts/LibraryDemo.sol";
 import { TestLib } from "../contracts/TestLib.sol";
 
+// Testing calling functions from the library TestLib
+
 contract TestLibraryDemo {
     TestLib.Data private _Data;
     address public owner;
